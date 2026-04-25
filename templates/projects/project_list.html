@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body_class %}inner-page{% endblock %}
+
+{% block title %}Проекты{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="projects-title">Наши проекты</h1>
+</div>
+
+<div class="projects">
+    {% for project in projects %}
+        <div class="project-card">
+
+            <h2>
+                <a href="{% url 'project_detail' project.pk %}">
+                    {{ project.title }}
+                </a>
+            </h2>
+
+            {% if project.images.first %}
+                <img src="{{ project.images.first.image.url }}">
+            {% endif %}
+
+            {% if project.location %}
+                <p><strong>{{ project.location }}</strong></p>
+            {% endif %}
+
+            <p>{{ project.description }}</p>
+
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+

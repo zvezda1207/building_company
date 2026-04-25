@@ -1,0 +1,628 @@
+* {
+    box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ===== HEADER ===== */
+
+.header {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+
+    border-radius: 12px;
+    padding: 12px 20px;
+}
+
+/* ===== LOGO ===== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo:hover {
+    opacity: 0.85;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.logo-name {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.burger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.burger:hover {
+    opacity: 0.7;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #2f6fed;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #2f6fed;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-image: url("/static/images/hero2.png");
+    background-size: cover;
+    background-position: center right;
+}
+
+.hero .container {
+    max-width: none;
+    margin: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.hero-text {
+    max-width: 500px;
+    margin-left: 0;
+    margin-top: -10px;    
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* ===== HERO TEXT ===== */
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* тень оставляем */
+.hero-text h1,
+.hero-text p {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* базовый текст (сброс лишних отступов) */
+.hero-text p {
+    margin: 0;
+    color: #222;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ===== SERVICES ===== */
+
+.hero-services {
+    margin-top: 10px;
+    margin-bottom: 20px;   /* ← увеличили расстояние вниз */
+
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e4fd8;
+}
+
+/* ===== EXTRA (главный смысл) ===== */
+
+.hero-extra {
+    margin-bottom: 20px;   /* ← отделяем от следующего блока */
+}
+
+.hero-extra p {
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: 600;      /* ← сделали чуть жирнее */
+    color: #222;
+}
+
+/* подстрока */
+.hero-text .hero-sub {
+    font-size: 14px;
+    color: #555;
+    font-weight: 400;
+}
+
+/* ===== СТАРЫЙ ТЕКСТ (в самый низ) ===== */
+
+.hero-text > p {
+    margin-top: 25px;      /* ← опускаем вниз */
+    margin-bottom: 15px;   /* ← расстояние до кнопки */
+
+    font-size: 13px;
+    color: #666;
+    max-width: 500px;
+}
+
+/* ===== КНОПКА ===== */
+
+.btn {
+    background: #1e4fd8;
+    color: white;
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+
+    margin-top: 20px;      /* ← чуть отступ от текста */
+}
+
+.btn:hover {
+    background: #1f5bd1;
+}
+
+/* ===== FEATURES ===== */
+
+.features {
+    margin-top: -150px;
+}
+
+.features-card {
+    background: white;
+    border-radius: 12px;
+
+    padding: 14px 18px;
+
+    display: flex;
+    gap: 16px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.feature-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex: 1;
+}
+
+.feature-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-item h4 {
+    font-size: 15px;
+    margin-bottom: 2px;
+    color: #111;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.4;
+}
+
+.hero-text p,
+.feature-item p {
+    line-height: 1.5;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    background: #eef3ff;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1e4fd8;
+
+    box-shadow: 0 6px 16px rgba(30, 79, 216, 0.15);
+}
+
+.icon svg {
+    width: 35px;
+    height: 35px;
+}
+
+/* ===== PROJECTS ===== */
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    flex: 1 1 300px;
+    max-width: 320px;
+
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.projects-title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 32px;
+}
+
+
+/* ===== PAGE MODES ===== */
+
+/* главная */
+.home .header {
+    position: absolute;
+    background: transparent;
+}
+
+/* внутренние страницы */
+.inner-page .header {
+    position: static;
+    background: #fff;
+    backdrop-filter: none;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+/* большие экраны */
+@media (min-width: 1400px) {
+    .hero-text {
+        margin-left: 120px;
+    }
+}
+
+
+/* ===== TABLET (768–1024) ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .container {
+        padding: 0 20px;
+    }
+
+    /* ===== HEADER ===== */
+    .nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .nav-link {
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+        height: auto;
+        padding: 140px 0 60px;
+    }
+
+    .hero-text {
+        max-width: 650px;
+        margin-left: 0;
+
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    .hero-services {
+        font-size: 14px;
+    }
+
+    .hero-extra p {
+        font-size: 15px;
+    }
+
+    .hero-text > p {
+        font-size: 13px;
+    }
+
+    /* ===== FEATURES (ПОЛИРОВКА) ===== */
+
+    .features {
+        margin-top: -50px;
+    }
+
+    .features-card {
+        background: white;
+        border-radius: 14px;
+        padding: 20px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .feature-item {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+
+        padding: 10px;
+
+        transition: transform 0.2s ease;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-3px);
+    }
+
+    .feature-item div {
+        max-width: 220px;
+    }
+
+    /* 🔥 выравнивание заголовков */
+    .feature-item h4 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #111;
+
+        min-height: 40px;
+    }
+
+    .feature-item p {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.4;
+    }
+
+    /* иконки */
+    .icon {
+        width: 60px;
+        height: 60px;
+
+        background: #eef3ff;
+        border-radius: 14px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #1e4fd8;
+
+        box-shadow: 0 6px 18px rgba(30, 79, 216, 0.15);
+    }
+
+    .icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* ===== FIX: расстояние в features ===== */
+
+    .feature-item h4 {
+        margin-bottom: 4px;     /* было 6 */
+        min-height: 32px;       /* было 40 → меньше, но ещё держит выравнивание */
+    }
+
+    .feature-item p {
+        margin-top: 0;
+    }
+
+    /* ===== FIX: выравнивание иконки ===== */
+
+    .feature-item {
+        align-items: flex-start;
+    }
+
+    .icon {
+        margin-top: 20px;   /* ← ключевая настройка */
+    }
+}
+
+/* ===== НИЗКИЕ ЭКРАНЫ (ноутбуки, landscape планшеты) ===== */
+@media (max-width: 1024px) and (max-height: 700px) {
+
+    .hero {
+        padding: 100px 0 40px;
+    }
+
+    .features {
+        margin-top: -30px;
+    }
+}
+
+
+/* ===== MOBILE (до 767px) ===== */
+@media (max-width: 767px) {
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .burger {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    /* hero */
+    .hero {
+        height: auto;
+        padding: 180px 0 60px;
+        background-position: center;
+    }
+
+    .hero-text {
+        margin-left: 0;
+        max-width: 100%;
+
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    /* features */
+    .features-card {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .features {
+        margin-top: 20px;
+    }
+
+    /* projects */
+    .projects {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project-card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .project-card h2 {
+        font-size: 18px;
+        word-break: break-word;
+    }
+
+    .project-card p {
+        font-size: 14px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* header */
+    .header {
+        position: relative;
+    }
+
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+}

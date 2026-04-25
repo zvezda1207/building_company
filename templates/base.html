@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Строительная компания{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+
+            <a href="/" class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="KOSTIN.STROY">
+                <span class="logo-name">KOSTIN.STROY</span>
+            </a>
+            <div class="burger">
+                ☰
+            </div>
+
+            <nav class="nav">
+                <a href="/" class="nav-link">Главная</a>
+                <a href="/projects/" class="nav-link">Проекты</a>
+                <a href="#" class="nav-link">Услуги</a>
+                <a href="#" class="nav-link">О компании</a>
+                <a href="#" class="nav-link">Контакты</a>
+            </nav>
+
+        </div>
+    </div>
+</header>
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+<script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

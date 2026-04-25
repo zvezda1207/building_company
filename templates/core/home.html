@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_class %}home{% endblock %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="container">
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <h1>Качественные решения для вашего комфорта</h1>
+
+                <!-- блок заказчика -->
+                <div class="hero-services">
+                    Ремонт • Строительство • Архитектура • Дизайн
+                </div>
+
+                <div class="hero-extra">
+                    <p>
+                        Профессиональный гид по созданию идеального пространства
+                    </p>
+
+                    <p class="hero-sub">
+                        Реальные проекты • тренды 2025–2026
+                    </p>
+                </div>
+
+                <!-- твой текст -->
+                <p>
+                    Выполняем любые виды строительных работ — от ремонта и отделки
+                    до демонтажа и исправления ошибок. Работаем аккуратно и в срок.
+                </p>
+
+                <a href="/projects/" class="btn">Наши проекты</a>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="features-card">
+            <!-- твои feature-item без изменений -->
+            <div class="feature-item">
+                <div class="icon">
+                    <i data-lucide="wrench"></i>
+                </div>
+                <div>
+                    <h4>Любые работы</h4>
+                    <p>Ремонт, отделка, демонтаж, установка и многое другое</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="icon">
+                    <i data-lucide="shield-check"></i>
+                </div>
+                <div>
+                    <h4>Исправляем ошибки</h4>
+                    <p>Переделываем некачественные работы и недоделки</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="icon">
+                    <i data-lucide="home"></i>
+                </div>
+                <div>
+                    <h4>Качество и опыт</h4>
+                    <p>Опытная команда и контроль каждого этапа работ</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="icon">
+                    <i data-lucide="calendar"></i>
+                </div>
+                <div>
+                    <h4>Соблюдаем сроки</h4>
+                    <p>Работаем по договору и выполняем в срок</p>
+                </div>
+            </div>
+            </div>
+        </div>
+</section>
+
+{% endblock %}
+
+
+
+            
