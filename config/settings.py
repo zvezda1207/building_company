@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 import os
 from pathlib import Path
-from django.contrib.auth import get_user_model
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -131,12 +131,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-if os.environ.get("CREATE_SUPERUSER") == "True":
-    User = get_user_model()
-    username = os.environ.get("DJANGO_SUPERUSER_USERNAME")
-    email = os.environ.get("DJANGO_SUPERUSER_EMAIL")
-    password = os.environ.get("DJANGO_SUPERUSER_PASSWORD")
-
-    if username and password:
-        if not User.objects.filter(username=username).exists():
-            User.objects.create_superuser(username, email, password)
