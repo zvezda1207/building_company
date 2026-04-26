@@ -108,6 +108,20 @@ body {
     width: 100%;
 }
 
+.phone {
+    font-weight: 600;
+    color: #222;
+    text-decoration: none;
+
+    margin-left: 20px;
+
+    white-space: nowrap;
+}
+
+.phone:hover {
+    opacity: 0.8;
+}
+
 /* ===== HERO ===== */
 
 .hero {
@@ -165,7 +179,7 @@ body {
 
 .hero-services {
     margin-top: 10px;
-    margin-bottom: 20px;   /* ← увеличили расстояние вниз */
+    margin-bottom: 20px;   
 
     font-size: 15px;
     font-weight: 600;
@@ -181,7 +195,7 @@ body {
 .hero-extra p {
     margin-bottom: 6px;
     font-size: 15px;
-    font-weight: 600;      /* ← сделали чуть жирнее */
+    font-weight: 600;      
     color: #222;
 }
 
@@ -195,7 +209,7 @@ body {
 /* ===== СТАРЫЙ ТЕКСТ (в самый низ) ===== */
 
 .hero-text > p {
-    margin-top: 25px;      /* ← опускаем вниз */
+    margin-top: 25px;      
     margin-bottom: 15px;   /* ← расстояние до кнопки */
 
     font-size: 13px;
@@ -318,10 +332,86 @@ body {
     margin-bottom: 10px;
 }
 
+.project-card a {
+    text-decoration: none;
+    color: #2b2b2b;
+}
+
+.project-card a:hover {
+    color: #1e4fd8;
+}
+
 .projects-title {
     text-align: center;
     margin: 40px 0;
     font-size: 32px;
+}
+
+/* ===== ДЕТАЛЬ ПРОЕКТА ===== */
+
+.project-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* заголовок */
+.project-detail h1 {
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+/* описание */
+.project-description {
+    font-size: 17px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* локация */
+.project-location {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* заголовок галереи */
+.project-gallery-title {
+    margin: 30px 0 15px;
+    color: #333;
+}
+
+/* ===== ГЛАВНОЕ ФОТО ===== */
+
+.main-image-block {
+    margin-bottom: 25px;   /* ← расстояние до галереи */
+}
+
+.main-image {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    margin-bottom: 6px !important;  /* ← перебиваем старые стили */
+}
+
+/* ===== ГАЛЕРЕЯ ===== */
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* карточка фото */
+.gallery-item {
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -338,6 +428,80 @@ body {
     position: static;
     background: #fff;
     backdrop-filter: none;
+}
+
+/* ===== CONTACTS ===== */
+
+.contacts-page {
+    padding: 60px 0;
+}
+
+.contacts-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.contacts-card {
+    max-width: 400px;
+    margin: 0 auto;
+
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contacts-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contacts-phone {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1e4fd8;
+    text-decoration: none;
+}
+
+.contacts-phone:hover {
+    opacity: 0.8;
+}
+
+.contacts-messengers {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.messenger {
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+
+    color: white;
+}
+
+/* WhatsApp */
+.whatsapp {
+    background: #25D366;
+}
+
+/* Telegram */
+.telegram {
+    background: #2AABEE;
+}
+
+.messenger:hover {
+    opacity: 0.85;
 }
 
 
@@ -359,6 +523,10 @@ body {
     }
 
     /* ===== HEADER ===== */
+
+    .header-inner {
+        flex-wrap: wrap;
+    }
     .nav {
         gap: 15px;
         flex-wrap: wrap;
@@ -368,6 +536,15 @@ body {
     .nav-link {
         white-space: nowrap;
         font-size: 14px;
+    }
+
+    .phone {
+        font-size: 14px;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+
+        text-align: right;
     }
 
     /* ===== HERO ===== */
@@ -482,8 +659,8 @@ body {
     /* ===== FIX: расстояние в features ===== */
 
     .feature-item h4 {
-        margin-bottom: 4px;     /* было 6 */
-        min-height: 32px;       /* было 40 → меньше, но ещё держит выравнивание */
+        margin-bottom: 4px;    
+        min-height: 32px;       
     }
 
     .feature-item p {
@@ -497,7 +674,7 @@ body {
     }
 
     .icon {
-        margin-top: 20px;   /* ← ключевая настройка */
+        margin-top: 20px;   
     }
 }
 
@@ -544,6 +721,22 @@ body {
 
     .nav.active {
         display: flex;
+    }
+
+    .nav.active .mobile-contacts {
+        display: block;
+    }
+
+    .phone {
+        display: none;
+    }
+
+    .mobile-contacts {
+        display: block;
+    }
+
+    .header-contacts {
+        display: none !important;
     }
 
     /* hero */
@@ -625,4 +818,291 @@ body {
     .logo-text {
         font-size: 18px;
     }
+}
+
+/* ===== PROJECT DETAIL FINAL CLEAN ===== */
+
+/* главный блок страницы */
+.project-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* заголовок */
+.project-detail h1 {
+    font-size: 28px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+/* описание */
+.project-detail > p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* локация */
+.project-detail strong {
+    color: #333;
+}
+
+/* заголовок галереи */
+.project-gallery-title {
+    margin: 30px 0 15px;
+    color: #333;
+}
+
+/* ===== ГЛАВНОЕ ФОТО ===== */
+
+.main-image {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto 5px;
+}
+
+.main-image-block {
+    margin-bottom: 25px;
+}
+
+/* ===== ПОДПИСИ ===== */
+
+p.image-caption {
+    font-size: 15px;
+    color: #555;
+    margin: 5px 0 0;
+}
+
+/* ===== ГАЛЕРЕЯ ===== */
+
+.project-gallery {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.project-detail p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.project-detail .image-caption {
+    font-size: 15px;
+    color: #666;
+}
+
+
+/* ===== FINAL CLEAN PROJECT TEXT ===== */
+
+.project-detail p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.project-detail .image-caption {
+    font-size: 15px;
+    color: #666;
+}
+
+
+/* ===== BRAND COLOR (тёмно-коричневый) ===== */
+
+:root {
+    --main-brown: #5e3f2d;
+}
+
+/* ===== ЗАГОЛОВКИ ===== */
+
+/* название проекта */
+.project-detail h1 {
+    color: var(--main-brown);
+}
+
+/* "Наши проекты" */
+.projects-title {
+    color: var(--main-brown);
+}
+
+/* ===== HEADER ===== */
+
+/* логотип текст */
+.logo-name {
+    color: var(--main-brown);
+}
+
+/* меню */
+.nav-link {
+    color: var(--main-brown);
+}
+
+/* активный hover можно оставить синим или тоже коричневым */
+.nav-link:hover {
+    color: #1e4fd8; 
+}
+
+/* телефон */
+.phone {
+    color: var(--main-brown);
+}
+
+/* ===== PROJECT TITLES COLOR ===== */
+
+.project-card h2 a {
+    color: #5e3f2d;
+}
+
+.project-card h2 a:hover {
+    opacity: 0.7;
+}
+
+
+/* ===== HEADER CONTACTS CLEAN ===== */
+
+.header-contacts {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* телефон */
+.phone {
+    font-weight: 600;
+    color: #5e3f2d;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* иконки */
+.messenger-header {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f3f3f3;
+    border-radius: 8px;
+
+    color: #5e3f2d;
+    transition: 0.2s;
+}
+
+.messenger-header svg {
+    width: 18px;
+    height: 18px;
+}
+
+.messenger-header:hover {
+    background: #d6d4d4;
+}
+
+
+@media (hover: none) {
+    .messenger-header:hover {
+        background: #f3f3f3;
+    }
+}
+
+
+/* ===== MOBILE CONTACTS (внутри бургера) ===== */
+
+.mobile-contacts {
+    display: none;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* телефон */
+.mobile-phone {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    color: #5e3f2d;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+/* иконки */
+.mobile-messengers {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.mobile-messengers a {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f3f3f3;
+    border-radius: 8px;
+
+    color: #5e3f2d;
+}
+
+.mobile-messengers svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ===== LIGHTBOX ===== */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+.lightbox-img {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    animation: zoom 0.2s ease;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
 }

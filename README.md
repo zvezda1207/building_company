@@ -58,4 +58,4 @@ python manage.py runserver
 📌 Автор
 
 Python backend разработчик (junior)
-(тут потом добавишь своё имя и GitHub)
+(имя и GitHub)

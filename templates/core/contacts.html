@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block body_class %}inner-page{% endblock %}
+
+{% block content %}
+
+<div class="container contacts-page">
+
+    <h1 class="contacts-title">Контакты</h1>
+
+    <div class="contacts-card">
+
+        <p class="contacts-name">Владимир</p>
+
+        <a href="tel:+79612680008" class="contacts-phone">
+            8 (961) 268-00-08
+        </a>
+
+        <div class="contacts-messengers">
+
+            <a href="https://wa.me/79612680008" target="_blank" class="messenger whatsapp">
+                WhatsApp
+            </a>
+
+            <a href="https://t.me/+79612680008" target="_blank" class="messenger telegram">
+                Telegram
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
