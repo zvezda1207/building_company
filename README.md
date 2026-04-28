@@ -1,23 +1,36 @@
 🏗️ KOSTIN.STROY — Сайт строительной компании
 
+---
+
 Веб-приложение-портфолио для строительной компании, выполненное на Django.
 Сайт демонстрирует проекты, услуги и преимущества компании с современным адаптивным интерфейсом.
 
+---
+
 🚀 Функционал
+
 📌 Главная страница с презентацией компании
 🧱 Блок преимуществ (адаптивная сетка)
 🏠 Раздел проектов с карточками
 📷 Загрузка и отображение изображений (Django Media)
 📱 Полностью адаптивная верстка (desktop / tablet / mobile)
 🍔 Бургер-меню для мобильных устройств
+
+---
+
 🛠️ Стек технологий
+
 Python 3.12
 Django
 HTML5 / CSS3
 SQLite (по умолчанию)
 JavaScript (минимально)
 Lucide Icons
+
+---
+
 📂 Структура проекта
+
 building_company/
 ├── config/          # настройки Django
 ├── projects/        # приложение с проектами
@@ -27,8 +40,12 @@ building_company/
 ├── media/           # загруженные изображения
 ├── manage.py
 └── requirements.txt
+
+---
+
 ⚙️ Установка и запуск
-git clone https://github.com/your-username/building_company.git
+
+git clone https://github.com/zvezda1207/building_company.git
 cd building_company
 
 python -m venv venv
@@ -38,6 +55,9 @@ pip install -r requirements.txt
 
 python manage.py migrate
 python manage.py runserver
+
+---
+
 🌐 Демо
 
 (сюда добавим ссылку после деплоя)
@@ -51,11 +71,9 @@ python manage.py runserver
 Упор на чистую верстку и UX
 Реализована адаптивность под разные устройства и ориентации
 Используется Django Admin для управления контентом
-📞 Контакты
 
-Проект разработан в учебных и портфолио-целях.
+---
 
 📌 Автор
 
-Python backend разработчик (junior)
-(имя и GitHub)
+Irina Tka4eva
