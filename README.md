@@ -51,7 +51,12 @@ building_company/
 
 ## 📸 Скриншоты
 
-*(можно добавить позже)*
+<p align="center">
+  <img src="screenshots/main.png" width="400">
+  <img src="screenshots/projects.png" width="400">
+</p>
+
+*(позже можно изменить)*
 
 ---
 
