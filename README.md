@@ -51,12 +51,14 @@ building_company/
 
 ## 📸 Скриншоты
 
+Демонстрационные данные используются в целях презентации интерфейса.
+
 <p align="center">
   <img src="screenshots/main.png" width="400">
   <img src="screenshots/projects.png" width="400">
 </p>
 
-*(позже можно изменить)*
+*(позже будут изменены)*
 
 ---
 
