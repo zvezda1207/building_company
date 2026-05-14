@@ -56,9 +56,9 @@ building_company/
 <p align="center">
   <img src="screenshots/main.png" width="400">
   <img src="screenshots/projects.png" width="400">
+  <img src="screenshots/gallery.png" width="400">
+  <img src="screenshots/contacts.png" width="400">
 </p>
-
-*(позже будут изменены)*
 
 ---
 
