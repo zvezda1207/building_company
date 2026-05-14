@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block body_class %}inner-page{% endblock %}
+
+{% block title %}Галерея работ{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1 class="projects-title">Галерея работ</h1>
+
+    <div class="gallery-page">
+
+        {% for image in images %}
+            <div class="gallery-page-item">
+
+                <img src="{{ image.image.url }}" alt="">
+
+                {% if image.caption %}
+                    <p class="gallery-page-caption">
+                        {{ image.caption }}
+                    </p>
+                {% endif %}
+
+            </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

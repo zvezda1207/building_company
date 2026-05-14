@@ -26,6 +26,7 @@
             <nav class="nav">
                 <a href="/" class="nav-link">Главная</a>
                 <a href="/projects/" class="nav-link">Проекты</a>
+                <a href="{% url 'gallery' %}" class="nav-link">Галерея</a>
                 <a href="{% url 'contacts' %}" class="nav-link">Контакты</a>
 
                 <div class="mobile-contacts">
@@ -132,6 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="footer-center">
             <a href="/" class="footer-link">Главная</a>
             <a href="/projects/" class="footer-link">Проекты</a>
+            <a href="{% url 'gallery' %}" class="footer-link">Галерея</a>
             <a href="{% url 'contacts' %}" class="footer-link">Контакты</a>
         </div>
 
