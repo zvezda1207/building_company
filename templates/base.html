@@ -26,8 +26,6 @@
             <nav class="nav">
                 <a href="/" class="nav-link">Главная</a>
                 <a href="/projects/" class="nav-link">Проекты</a>
-                <a href="#" class="nav-link">Услуги</a>
-                <a href="#" class="nav-link">О компании</a>
                 <a href="{% url 'contacts' %}" class="nav-link">Контакты</a>
 
                 <div class="mobile-contacts">
@@ -117,6 +115,52 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
+
+<footer class="footer">
+    <div class="container footer-inner">
+
+        <div class="footer-left">
+            <div class="footer-logo">
+                KOSTIN.STROY
+            </div>
+
+            <p class="footer-text">
+                Строительство и ремонт под ключ
+            </p>
+        </div>
+
+        <div class="footer-center">
+            <a href="/" class="footer-link">Главная</a>
+            <a href="/projects/" class="footer-link">Проекты</a>
+            <a href="{% url 'contacts' %}" class="footer-link">Контакты</a>
+        </div>
+
+        <div class="footer-right">
+
+            <a href="tel:+79612680008" class="footer-phone">
+                8 (961) 268-00-08
+            </a>
+
+            <div class="footer-messengers">
+
+                <a href="https://wa.me/79612680008" target="_blank">
+                    <i data-lucide="message-circle"></i>
+                </a>
+
+                <a href="https://t.me/" target="_blank">
+                    <i data-lucide="send"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 KOSTIN.STROY
+    </div>
+</footer>
 
 </body>
 </html>

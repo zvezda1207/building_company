@@ -84,7 +84,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #222;
+    color: #5e3f2d;
     font-weight: 600;
     position: relative;
 }
@@ -96,12 +96,12 @@ body {
     bottom: -6px;
     width: 0;
     height: 2px;
-    background: #2f6fed;
+    background: #5e3f2d;
     transition: 0.3s;
 }
 
 .nav-link:hover {
-    color: #2f6fed;
+    color: #5e3f2d !important;
 }
 
 .nav-link:hover::after {
@@ -338,7 +338,22 @@ body {
 }
 
 .project-card a:hover {
-    color: #1e4fd8;
+    color: #5e3f2d;
+}
+
+.project-card h2 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.project-card h2 a {
+    color: #5e3f2d;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.project-card h2 a:hover {
+    opacity: 0.7;
 }
 
 .projects-title {
@@ -378,6 +393,26 @@ body {
 .project-gallery-title {
     margin: 30px 0 15px;
     color: #333;
+}
+
+/* кнопка "Подробнее" */
+.project-more {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #1e4fd8;
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.project-more:hover {
+    transform: translateX(4px);
+    opacity: 0.8;
 }
 
 /* ===== ГЛАВНОЕ ФОТО ===== */
@@ -676,6 +711,10 @@ body {
     .icon {
         margin-top: 20px;   
     }
+
+    .footer-inner {
+        gap: 40px;
+    }
 }
 
 /* ===== НИЗКИЕ ЭКРАНЫ (ноутбуки, landscape планшеты) ===== */
@@ -957,7 +996,7 @@ p.image-caption {
 
 /* активный hover можно оставить синим или тоже коричневым */
 .nav-link:hover {
-    color: #1e4fd8; 
+    color: #1d377e; 
 }
 
 /* телефон */
@@ -1105,4 +1144,177 @@ p.image-caption {
     color: white;
     font-size: 40px;
     cursor: pointer;
+}
+
+
+/* ===== FOOTER ===== */
+
+.footer {
+    background: #2f241e;
+    color: #f5f5f5;
+
+    margin-top: 0;
+    padding-top: 50px;
+
+    clear: both;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 170px;
+
+    padding-bottom: 40px;
+
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+}
+
+.footer-center {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-link {
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.footer-phone {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-phone:hover {
+    opacity: 0.7;
+}
+
+.footer-messengers {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-messengers a {
+    color: white;
+    transition: 0.2s;
+}
+
+.footer-messengers a:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    text-align: center;
+
+    padding: 18px 0;
+
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+}
+
+
+/* ===== FOOTER MOBILE ===== */
+
+@media (max-width: 767px) {
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-right {
+        align-items: center;
+    }
+
+    .footer-center {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* ===== FOOTER ORIENTATION FIX ===== */
+
+/* телефоны горизонтально */
+@media (max-width: 950px) and (orientation: landscape) {
+
+    .footer-inner {
+        gap: 70px;
+    }
+
+    .footer {
+        padding-top: 25px;
+    }
+}
+
+/* планшеты вертикально */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    .footer-inner {
+        gap: 35px;
+    }
+
+    .footer {
+        padding-top: 30px;
+    }
+}
+
+
+@media (max-width: 700px) and (orientation: landscape) {
+
+    .footer {
+        padding-top: 18px;
+    }
+
+    .footer-inner {
+        gap: 12px;
+        padding-bottom: 18px;
+    }
+
+    .footer-logo {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+    }
+
+    .footer-phone {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        padding: 10px 0;
+        font-size: 12px;
+    }
 }
