@@ -1198,7 +1198,7 @@ p.image-caption {
     color: #f5f5f5;
 
     margin-top: 0;
-    padding-top: 50px;
+    padding: 35px 0 0;
 
     clear: both;
 }
@@ -1207,9 +1207,10 @@ p.image-caption {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 170px;
 
-    padding-bottom: 40px;
+    gap: 120px;
+
+    padding-bottom: 18px;
 
     flex-wrap: wrap;
 }
@@ -1242,11 +1243,13 @@ p.image-caption {
     opacity: 0.7;
 }
 
+/* ===== RIGHT BLOCK ===== */
+
 .footer-right {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    align-items: flex-end;
+    align-items: center;
+    gap: 12px;
 }
 
 .footer-phone {
@@ -1259,29 +1262,64 @@ p.image-caption {
     opacity: 0.7;
 }
 
+/* ===== SOCIAL ICONS ===== */
+
 .footer-messengers {
     display: flex;
-    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
 }
 
-.footer-messengers a {
+.footer-social {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
     color: white;
+    text-decoration: none;
+
     transition: 0.2s;
 }
 
-.footer-messengers a:hover {
-    opacity: 0.7;
+/* Font Awesome иконки */
+.footer-social i {
+    font-size: 22px;
+    line-height: 1;
 }
 
+/* Lucide SVG (если где-то остались) */
+.footer-social svg {
+    width: 22px;
+    height: 22px;
+}
+
+.footer-social:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+/* ===== FOOTER BOTTOM ===== */
+
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255,255,255,0.08);
 
     text-align: center;
 
-    padding: 18px 0;
+    padding: 12px 0 10px;
+    margin-top: 8px;
 
     font-size: 14px;
     color: rgba(255,255,255,0.6);
+}
+
+.footer-bottom span {
+    margin-left: 8px;
 }
 
 
@@ -1333,6 +1371,7 @@ p.image-caption {
 }
 
 
+/* очень низкие экраны */
 @media (max-width: 700px) and (orientation: landscape) {
 
     .footer {
@@ -1362,7 +1401,6 @@ p.image-caption {
         font-size: 12px;
     }
 }
-
 
 
 /* ===== MID SCREENS FIX ===== */
@@ -1395,3 +1433,222 @@ p.image-caption {
 }
 
 
+/* ===== SOCIALS ===== */
+.socials {
+    padding: 10px 0;          /* верх/низ блока */
+    margin-top: 10px;         /* отступ сверху от блока преимуществ */
+    background: #f8f8f8;      /* светлый фон для контраста */
+    text-align: center;
+}
+
+.socials-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 10px;         /* минимальный верхний отступ */
+    color: #5e3f2d;
+}
+
+.socials-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;        /* чуть компактнее */
+    background: white;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #5e3f2d;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.social-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* иконки в кнопках */
+.social-card i {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;     /* для правильного центрирования */
+    align-items: center;
+    justify-content: center;
+}
+
+/* адаптив для мобильных */
+@media (max-width: 767px) {
+    .features-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .socials-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* ===== CONTACTS SOCIALS ===== */
+.contacts-socials {
+    padding: 20px 0;
+    text-align: center;
+    background: #f8f8f8; /* светлый фон */
+    margin-top: 30px;
+}
+
+.contacts-socials-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #5e3f2d;
+}
+
+.contacts-socials-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contacts-socials-links .social-card i {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* адаптив для мобильных */
+@media (max-width: 767px) {
+    .contacts-socials-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* ===== FINAL SOCIALS CLEAN ===== */
+
+/* ===== HEADER ===== */
+
+.header-contacts {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.messenger-header {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f3f3f3;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.messenger-header:hover {
+    background: #e7e7e7;
+}
+
+.messenger-header i {
+    font-size: 18px;
+    color: #5e3f2d;
+}
+
+
+/* ===== FOOTER ===== */
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-messengers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-social {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.footer-social:hover {
+    opacity: 0.7;
+}
+
+.footer-social i {
+    font-size: 20px;
+    color: white;
+}
+
+
+/* ===== CONTACTS ===== */
+
+.contacts-messengers {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+
+    margin-top: 20px;
+}
+
+.contact-social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+.contact-social:hover {
+    opacity: 0.85;
+}
+
+.contact-social i {
+    font-size: 18px;
+}
+
+.contact-social.whatsapp {
+    background: #25D366;
+}
+
+.contact-social.telegram {
+    background: #2AABEE;
+}

@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Строительная компания{% endblock %}</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/850375b8a1.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
@@ -37,11 +42,11 @@
 
                     <div class="mobile-messengers">
                         <a href="https://wa.me/79612680008" target="_blank">
-                            <i data-lucide="message-circle"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
                         </a>
 
                         <a href="https://t.me/" target="_blank">
-                            <i data-lucide="send"></i>
+                            <i class="fa-brands fa-telegram"></i>
                         </a>
                     </div>
 
@@ -54,12 +59,12 @@
                     8 (961) 268-00-08
                 </a>
 
-                <a href="https://wa.me/79612680008" target="_blank" class="messenger-header">
-                    <i data-lucide="message-circle"></i>
+                <a href="https://wa.me/79612680008" target="_blank" class="messenger-header whatsapp-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
                 </a>
 
                 <a href="https://t.me/" target="_blank" class="messenger-header">
-                    <i data-lucide="send"></i>
+                    <i class="fa-brands fa-telegram"></i>
                 </a>
 
             </div>
@@ -73,16 +78,6 @@
     {% endblock %}
 </main>
 
-<footer>
-    <div class="container">
-        <p>© 2026</p>
-    </div>
-</footer>
-
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-</script>
 
 <script>
     const burger = document.querySelector('.burger');
@@ -118,9 +113,12 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <footer class="footer">
+
     <div class="container footer-inner">
 
+        <!-- левый блок -->
         <div class="footer-left">
+
             <div class="footer-logo">
                 KOSTIN.STROY
             </div>
@@ -128,15 +126,20 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="footer-text">
                 Строительство и ремонт под ключ
             </p>
+
         </div>
 
+        <!-- меню -->
         <div class="footer-center">
+
             <a href="/" class="footer-link">Главная</a>
             <a href="/projects/" class="footer-link">Проекты</a>
             <a href="{% url 'gallery' %}" class="footer-link">Галерея</a>
             <a href="{% url 'contacts' %}" class="footer-link">Контакты</a>
+
         </div>
 
+        <!-- контакты -->
         <div class="footer-right">
 
             <a href="tel:+79612680008" class="footer-phone">
@@ -145,12 +148,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="footer-messengers">
 
-                <a href="https://wa.me/79612680008" target="_blank">
-                    <i data-lucide="message-circle"></i>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/79612680008"
+                   target="_blank"
+                   class="footer-social">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
                 </a>
 
-                <a href="https://t.me/" target="_blank">
-                    <i data-lucide="send"></i>
+                <!-- Telegram -->
+                <a href="https://t.me/"
+                   target="_blank"
+                   class="footer-social">
+
+                    <i class="fa-brands fa-telegram"></i>
+
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/"
+                   target="_blank"
+                   class="footer-social">
+
+                    <i class="fa-brands fa-instagram"></i>
+
                 </a>
 
             </div>
@@ -159,10 +181,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     </div>
 
+    <!-- копирайт -->
     <div class="footer-bottom">
-        © 2026 KOSTIN.STROY
+        © 2026 <span>KOSTIN.STROY</span>
     </div>
+
 </footer>
+
+<!-- Скрипт для иконок lucide -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+  lucide.createIcons();
+</script>
 
 </body>
 </html>
